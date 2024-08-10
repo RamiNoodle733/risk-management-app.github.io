@@ -1,80 +1,181 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f4;
+    background-color: #0d1117;
+    color: #c9d1d9;
 }
 
-/* Header */
 header {
-    background-color: #333;
-    color: white;
+    background-color: #161b22;
+    color: #c9d1d9;
     padding: 1rem;
+    text-align: center;
+    border-bottom: 5px solid #58a6ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+#risk-form {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#risk-form h2 {
+    color: #58a6ff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+#risk-form label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#risk-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+#risk-form button {
     width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #58a6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#risk-form button:hover {
+    background-color: #1f6feb;
+}
+
+#charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.chart-container {
+    width: 45%;
+    margin: 10px;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+#comparison-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#comparison-options label {
+    margin-right: 10px;
+    color: #c9d1d9;
+}
+
+#compareButton {
+    background-color: #58a6ff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#compareButton:hover {
+    background-color: #1f6feb;
+}
+
+#risk-output {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
-/* Main Content */
-main {
-    width: 90%;
-    max-width: 600px;
-    background-color: white;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 2rem;
+#risk-output h2 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
 }
 
-h2 {
-    color: #333;
+#risk-output p {
+    font-size: 1.2rem;
 }
 
-/* Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 0.5rem;
-    color: #555;
-}
-
-input {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 0.7rem;
-    background-color: #333;
+#exportButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #58a6ff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #555;
+#exportButton:hover {
+    background-color: #1f6feb;
 }
 
-/* Output Section */
-#risk-output {
-    margin-top: 2rem;
+#mitigation-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-#result {
+#mitigation-container h2 {
+    color: #58a6ff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#mitigation-suggestions {
     font-size: 1.2rem;
-    color: #333;
+    color: #8b949e;
+    text-align: center;
 }
 
-/* Footer */
 footer {
-    margin-top: 2rem;
+    text-align: center;
+    padding: 10px;
+    background-color: #161b22;
     color: #777;
 }

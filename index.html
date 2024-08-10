@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risk Management App</title>
+    <title>Risk Management Assessor</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Risk Management Dashboard</h1>
+        <h1>Risk Management Assessor</h1>
     </header>
 
     <main>
@@ -26,21 +26,47 @@
                 <label for="impact">Impact (0-10):</label>
                 <input type="number" id="impact" name="impact" min="0" max="10" required>
 
+                <label for="controlEffectiveness">Control Effectiveness (0-100):</label>
+                <input type="number" id="controlEffectiveness" name="controlEffectiveness" min="0" max="100" required>
+
                 <button type="submit">Calculate Risk</button>
             </form>
         </section>
 
-        <section id="chart-container">
-            <h2>Risk Chart</h2>
-            <canvas id="riskChart"></canvas>
+        <section id="charts">
+            <div class="chart-container">
+                <canvas id="riskChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="trendChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="comparisonChart"></canvas>
+                <div id="comparison-options">
+                    <label for="scenario1">Scenario 1:</label>
+                    <select id="scenario1"></select>
+
+                    <label for="scenario2">Scenario 2:</label>
+                    <select id="scenario2"></select>
+
+                    <button id="compareButton">Compare</button>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="radarChart"></canvas>
+            </div>
         </section>
 
         <section id="risk-output">
             <h2>Risk Analysis Result</h2>
             <p id="result">Enter risk factors to calculate risk.</p>
+            <button id="exportButton">Export as PDF</button>
         </section>
 
-        <button id="exportPDF">Export as PDF</button>
+        <section id="mitigation-container">
+            <h2>Risk Mitigation Suggestions</h2>
+            <p id="mitigation-suggestions">No suggestions available yet.</p>
+        </section>
     </main>
 
     <footer>
