@@ -1,2 +1,1 @@
-# risk-management-app
-A simple web application for risk management.
+https://raminoodle733.github.io/risk-management-app.github.io/
